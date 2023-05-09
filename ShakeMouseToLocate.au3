@@ -26,10 +26,10 @@
 #Region Globals
 
 global const $SHAKE_DIST = 20
-global const $SHAKE_SLICE_TIMEOUT = 75 ; milliseconds
-global const $SHAKE_TIMEOUT = 500 ; milliseconds
-global const $SHOWING_TIMEOUT = 750 ; milliseconds
-global       $needed_shake_count = 4 ; set from configuration
+global const $SHAKE_SLICE_TIMEOUT = 50 ; milliseconds
+global const $SHAKE_TIMEOUT = 400 ; milliseconds
+global const $SHOWING_TIMEOUT = 600 ; milliseconds
+global       $needed_shake_count = 3 ; set from configuration
 
 global const $VERSION  = "1.0"
 global const $APP_NAME = "ShakeMouseToLocate"
@@ -271,7 +271,7 @@ EndFunc
 Func _showBig()
    If $showing = 0 Then
 	  $showing = 1
-      SetBitmap($win_mouse, $g_hImage, 255)
+      SetBitmap($win_mouse, $g_hImage, 200)
       WinSetOnTop($win_mouse, '', 1)
    EndIf
 EndFunc
